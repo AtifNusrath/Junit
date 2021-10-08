@@ -18,4 +18,8 @@ public class UserRegistrationTest {
     public void validateEmail() {
         assertEquals(true, UserRegistration.isValidEmail());
     }
+    @Test
+    public void validateNumber() {
+        assertEquals(true, UserRegistration.isValidNo());
+    }
 }

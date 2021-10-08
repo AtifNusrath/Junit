@@ -40,4 +40,15 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(emails);
         return matcher.matches();
     }
+    public static boolean isValidNo() {
+        String mobileNo = "91 9874563210";
+        String mobile = "^(\\d{0,9}[\\s]?)?\\d{10}$";
+        Pattern mob = Pattern.compile(mobile);
+        if (mobileNo == null) {
+            return false;
+        }
+
+        Matcher matcher = mob.matcher(mobileNo);
+        return matcher.matches();
+    }
 }

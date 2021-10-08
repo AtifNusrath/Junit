@@ -2,8 +2,6 @@ package com.bridgelabz;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Scanner;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserRegistrationTest {
@@ -12,4 +10,8 @@ public class UserRegistrationTest {
         assertEquals(true, UserRegistration.isValidFirstName());
     }
 
+    @Test
+    public void validateUserLastName() {
+        assertEquals(true, UserRegistration.isValidLastName());
+    }
 }

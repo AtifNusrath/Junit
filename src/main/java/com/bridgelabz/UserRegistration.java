@@ -51,4 +51,16 @@ public class UserRegistration {
         Matcher matcher = mob.matcher(mobileNo);
         return matcher.matches();
     }
+
+    public static boolean isValidPwd()
+    {
+        String pwd = "Adminpassword";
+        String password = "^[A-Za-z]{8,}$";
+        Pattern pattern = Pattern.compile(password);
+        if (pwd ==null) {
+            return false;
+        }
+        Matcher match = pattern.matcher(pwd);
+        return match.matches();
+    }
 }

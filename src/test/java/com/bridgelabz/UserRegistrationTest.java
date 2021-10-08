@@ -22,4 +22,8 @@ public class UserRegistrationTest {
     public void validateNumber() {
         assertEquals(true, UserRegistration.isValidNo());
     }
+    @Test
+    public void validatePassword() {
+        assertEquals(true, UserRegistration.isValidPwd());
+    }
 }

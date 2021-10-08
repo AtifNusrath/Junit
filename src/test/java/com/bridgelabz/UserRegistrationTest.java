@@ -14,4 +14,8 @@ public class UserRegistrationTest {
     public void validateUserLastName() {
         assertEquals(true, UserRegistration.isValidLastName());
     }
+    @Test
+    public void validateEmail() {
+        assertEquals(true, UserRegistration.isValidEmail());
+    }
 }

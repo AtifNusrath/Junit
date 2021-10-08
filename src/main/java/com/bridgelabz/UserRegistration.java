@@ -27,4 +27,17 @@ public class UserRegistration {
         Matcher m2 = pattern.matcher(lastName);
         return m2.matches();
     }
+
+    public static boolean isValidEmail() {
+
+        String emails = "user@domain.com";
+        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        Pattern pattern = Pattern.compile(regex);
+        if (emails == null) {
+            return false;
+        }
+
+        Matcher matcher = pattern.matcher(emails);
+        return matcher.matches();
+    }
 }

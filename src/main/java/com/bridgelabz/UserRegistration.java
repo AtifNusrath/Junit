@@ -49,7 +49,8 @@ public class UserRegistration {
     }
 
     public static boolean isValidPwd(String pwd) {
-        String password = "^(?=.*?[A-Z])(?=.*?[a-z]).{8,}$";
+
+        String password = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*d).{8,}$";
         Pattern pattern = Pattern.compile(password);
         if (pwd == null) {
             return false;
@@ -57,5 +58,6 @@ public class UserRegistration {
         Matcher match = pattern.matcher(pwd);
         return match.matches();
     }
+
 }
 

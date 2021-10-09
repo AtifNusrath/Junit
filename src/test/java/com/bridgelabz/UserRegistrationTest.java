@@ -36,6 +36,8 @@ public class UserRegistrationTest {
     }
     @Test
     public void validatePassword() {
-        assertEquals(true, UserRegistration.isValidPwd());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.isValidPwd("Adminpassword");
+        assertEquals(true, result);
     }
 }

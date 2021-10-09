@@ -6,8 +6,7 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
     public static boolean isValidFirstName(String firstName) {
-       String pattern = "^[A-Z][a-z]{3,}";
-
+        String pattern = "^[A-Z][a-z]{3,}";
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
             return false;
@@ -48,10 +47,9 @@ public class UserRegistration {
         return matcher.matches();
     }
 
-    public static boolean isValidPwd()
+    public static boolean isValidPwd(String pwd)
     {
-        String pwd = "admin07@Pwd";
-        String password = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*d)(?=.*[@#$%^&-+=()]).{8,}$";
+        String password = "^[A-Za-z]{8,}$";
         Pattern pattern = Pattern.compile(password);
         if (pwd ==null) {
             return false;

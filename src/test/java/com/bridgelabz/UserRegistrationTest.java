@@ -1,11 +1,8 @@
 package com.bridgelabz;
 
 import org.junit.jupiter.api.Test;
-<<<<<<< HEAD
 
-=======
 import java.util.Scanner;
->>>>>>> UC1
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserRegistrationTest {
@@ -13,14 +10,10 @@ public class UserRegistrationTest {
     @Test
     public void validateUserFirstName() {
         UserRegistration userRegistration = new UserRegistration();
-<<<<<<< HEAD
 
         boolean result = userRegistration.isValidFirstName("Mohammed");
         assertEquals(true, result);
-=======
-        boolean firstName = userRegistration.isValidFirstName("Mohammed");
-        assertEquals(true, firstName );
->>>>>>> Uc2
+
     }
 
     @Test

@@ -13,14 +13,21 @@ public class UserRegistrationTest {
     @Test
     public void validateUserFirstName() {
         UserRegistration userRegistration = new UserRegistration();
+<<<<<<< HEAD
 
         boolean result = userRegistration.isValidFirstName("Mohammed");
         assertEquals(true, result);
+=======
+        boolean firstName = userRegistration.isValidFirstName("Mohammed");
+        assertEquals(true, firstName );
+>>>>>>> Uc2
     }
 
     @Test
     public void validateUserLastName() {
-        assertEquals(true, UserRegistration.isValidLastName());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean lastName = userRegistration.isValidLastName("Atif");
+        assertEquals(true, lastName );
     }
     @Test
     public void validateEmail() {

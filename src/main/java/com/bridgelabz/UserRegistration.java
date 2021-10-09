@@ -6,6 +6,10 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
     public static boolean isValidFirstName(String firstName) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> Uc2
         String pattern = "^[A-Z][a-z]{3,}";
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
@@ -15,9 +19,8 @@ public class UserRegistration {
         return match.matches();
     }
 
-    public static boolean isValidLastName() {
-        String lastName = "Atif";
-        String lname = "^[A-Z][A-Za-z]{3,}";
+    public static boolean isValidLastName(String lastName) {
+        String lname = "^[A-Z][a-z]{3,}";
         Pattern pattern = Pattern.compile(lname);
         if (lastName == null) {
             return false;

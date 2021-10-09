@@ -28,7 +28,7 @@ public class UserRegistration {
 
     public static boolean isValidEmail(String emails) {
 
-        String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
+        String regex = "^[\\w!#$%&'*+/=?`{|}~^-]+(?:\\.[\\w!#$%&'*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$";
         Pattern pattern = Pattern.compile(regex);
         if (emails == null) {
             return false;

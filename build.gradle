@@ -10,6 +10,9 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.andrewjamesjohnson:junit-parameterized-test-case:1.0.1'
+    implementation 'com.github.peterwippermann.junit4:parameterized-suite:1.1.0'
+    implementation 'junit:junit:4.13.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }

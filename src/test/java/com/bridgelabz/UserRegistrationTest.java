@@ -1,10 +1,17 @@
 package com.bridgelabz;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import java.util.Arrays;
+import java.util.Collection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
+@RunWith(Parameterized.class)
 public class UserRegistrationTest {
+
+
     @Test
     public void validateUserFirstName() {
         UserRegistration userRegistration = new UserRegistration();
@@ -40,4 +47,5 @@ public class UserRegistrationTest {
         boolean result = userRegistration.isValidPwd("Admin07pass@word");
         assertEquals(true, result);
     }
+
 }

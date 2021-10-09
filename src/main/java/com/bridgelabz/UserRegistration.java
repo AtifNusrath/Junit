@@ -5,10 +5,8 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-    public static boolean isValidFirstName() {
-
-        String firstName = "Mohammed";
-        String pattern = "^[A-Z][A-Za-z]{2,}";
+    public static boolean isValidFirstName(String firstName) {
+        String pattern = "^[A-Z][a-z]{3,}";
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
             return false;

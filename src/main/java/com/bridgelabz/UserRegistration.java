@@ -29,11 +29,8 @@ public class UserRegistration {
     }
 
     public static boolean isValidLastName(String lastName) {
-<<<<<<< HEAD
         String lname = "^[A-Z][a-z]{3,}";
-=======
-        String lname = "^[A-Z][A-Za-z]{3,}";
->>>>>>> UC4
+
         Pattern pattern = Pattern.compile(lname);
         if (lastName == null) {
             return false;

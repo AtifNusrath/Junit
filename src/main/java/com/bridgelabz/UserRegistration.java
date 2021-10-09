@@ -8,6 +8,7 @@ public class UserRegistration {
     public static boolean isValidFirstName(String firstName) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Uc2
@@ -15,6 +16,10 @@ public class UserRegistration {
 
 >>>>>>> UC3
         String pattern = "^[A-Z][a-z]{3,}";
+=======
+
+        String pattern = "^[A-Z][A-Za-z]{2,}";
+>>>>>>> UC4
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
             return false;
@@ -24,7 +29,11 @@ public class UserRegistration {
     }
 
     public static boolean isValidLastName(String lastName) {
+<<<<<<< HEAD
         String lname = "^[A-Z][a-z]{3,}";
+=======
+        String lname = "^[A-Z][A-Za-z]{3,}";
+>>>>>>> UC4
         Pattern pattern = Pattern.compile(lname);
         if (lastName == null) {
             return false;
@@ -43,8 +52,7 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(emails);
         return matcher.matches();
     }
-    public static boolean isValidNo() {
-        String mobileNo = "91 9874563210";
+    public static boolean isValidMobileNo(String mobileNo) {
         String mobile = "^(\\d{0,9}[\\s]?)?\\d{10}$";
         Pattern mob = Pattern.compile(mobile);
         if (mobileNo == null) {

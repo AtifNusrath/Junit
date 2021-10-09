@@ -19,17 +19,25 @@ public class UserRegistrationTest {
     public void validateUserLastName() {
         UserRegistration userRegistration = new UserRegistration();
         boolean lastName = userRegistration.isValidLastName("Atif");
+<<<<<<< HEAD
         assertEquals(true, lastName );
+=======
+        assertEquals(true, lastName);
+>>>>>>> UC4
     }
+
     @Test
     public void validateEmail() {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.isValidLastName("user@domain.com");
         assertEquals(true, result);
     }
+
     @Test
     public void validateNumber() {
-        assertEquals(true, UserRegistration.isValidNo());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.isValidMobileNo("91 9874563210");
+        assertEquals(true, result);
     }
     @Test
     public void validatePassword() {

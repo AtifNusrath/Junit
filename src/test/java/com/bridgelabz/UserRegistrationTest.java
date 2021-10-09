@@ -10,10 +10,15 @@ public class UserRegistrationTest {
     @Test
     public void validateUserFirstName() {
         UserRegistration userRegistration = new UserRegistration();
+<<<<<<< HEAD
 
         boolean result = userRegistration.isValidFirstName("Mohammed");
         assertEquals(true, result);
 
+=======
+        boolean result = userRegistration.isValidFirstName("Mohammed");
+        assertEquals(true, result);
+>>>>>>> UC3
     }
 
     @Test
@@ -24,7 +29,9 @@ public class UserRegistrationTest {
     }
     @Test
     public void validateEmail() {
-        assertEquals(true, UserRegistration.isValidEmail());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.isValidLastName("user@domain.com");
+        assertEquals(true, result);
     }
     @Test
     public void validateNumber() {

@@ -7,9 +7,13 @@ public class UserRegistration {
 
     public static boolean isValidFirstName(String firstName) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> Uc2
+=======
+
+>>>>>>> UC3
         String pattern = "^[A-Z][a-z]{3,}";
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
@@ -29,15 +33,13 @@ public class UserRegistration {
         return m2.matches();
     }
 
-    public static boolean isValidEmail() {
+    public static boolean isValidEmail(String emails) {
 
-        String emails = "user@domain.com";
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern pattern = Pattern.compile(regex);
         if (emails == null) {
             return false;
         }
-
         Matcher matcher = pattern.matcher(emails);
         return matcher.matches();
     }

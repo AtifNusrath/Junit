@@ -5,10 +5,8 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-    public static boolean isValidFirstName() {
-
-        String firstName = "Mohammed";
-        String pattern = "^[A-Z][A-Za-z]{2,}";
+    public static boolean isValidFirstName(String firstName) {
+        String pattern = "^[A-Z][a-z]{3,}";
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
             return false;
@@ -17,9 +15,9 @@ public class UserRegistration {
         return match.matches();
     }
 
-    public static boolean isValidLastName() {
-        String lastName = "Atif";
-        String lname = "^[A-Z][A-Za-z]{3,}";
+    public static boolean isValidLastName(String lastName) {
+        String lname = "^[A-Z][a-z]{3,}";
+
         Pattern pattern = Pattern.compile(lname);
         if (lastName == null) {
             return false;
@@ -28,20 +26,17 @@ public class UserRegistration {
         return m2.matches();
     }
 
-    public static boolean isValidEmail() {
+    public static boolean isValidEmail(String emails) {
 
-        String emails = "user@domain.com";
         String regex = "^[A-Za-z0-9+_.-]+@(.+)$";
         Pattern pattern = Pattern.compile(regex);
         if (emails == null) {
             return false;
         }
-
         Matcher matcher = pattern.matcher(emails);
         return matcher.matches();
     }
-    public static boolean isValidNo() {
-        String mobileNo = "91 9874563210";
+    public static boolean isValidMobileNo(String mobileNo) {
         String mobile = "^(\\d{0,9}[\\s]?)?\\d{10}$";
         Pattern mob = Pattern.compile(mobile);
         if (mobileNo == null) {
@@ -52,9 +47,8 @@ public class UserRegistration {
         return matcher.matches();
     }
 
-    public static boolean isValidPwd()
+    public static boolean isValidPwd(String pwd)
     {
-        String pwd = "Adminpassword";
         String password = "^(?=.*?[A-Z])(?=.*?[a-z]).{8,}$";
         Pattern pattern = Pattern.compile(password);
         if (pwd ==null) {
@@ -63,4 +57,5 @@ public class UserRegistration {
         Matcher match = pattern.matcher(pwd);
         return match.matches();
     }
+
 }

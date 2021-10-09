@@ -36,6 +36,7 @@ public class UserRegistration {
         Matcher matcher = pattern.matcher(emails);
         return matcher.matches();
     }
+
     public static boolean isValidMobileNo(String mobileNo) {
         String mobile = "^(\\d{0,9}[\\s]?)?\\d{10}$";
         Pattern mob = Pattern.compile(mobile);
@@ -47,14 +48,14 @@ public class UserRegistration {
         return matcher.matches();
     }
 
-    public static boolean isValidPwd(String pwd)
-    {
-        String password = "^[A-Za-z]{8,}$";
+    public static boolean isValidPwd(String pwd) {
+        String password = "^(?=.*?[A-Z])(?=.*?[a-z]).{8,}$";
         Pattern pattern = Pattern.compile(password);
-        if (pwd ==null) {
+        if (pwd == null) {
             return false;
         }
         Matcher match = pattern.matcher(pwd);
         return match.matches();
     }
 }
+

@@ -24,7 +24,7 @@ public class UserRegistrationTest {
     @Test
     public void validateEmail() {
         UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.isValidLastName("user@domain.com");
+        boolean result = userRegistration.isValidEmail("user@domain.com");
         assertEquals(true, result);
     }
 

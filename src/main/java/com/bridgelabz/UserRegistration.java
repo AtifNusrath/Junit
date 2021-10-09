@@ -6,20 +6,8 @@ import java.util.regex.Pattern;
 public class UserRegistration {
 
     public static boolean isValidFirstName(String firstName) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+       String pattern = "^[A-Z][a-z]{3,}";
 
->>>>>>> Uc2
-=======
-
->>>>>>> UC3
-        String pattern = "^[A-Z][a-z]{3,}";
-=======
-
-        String pattern = "^[A-Z][A-Za-z]{2,}";
->>>>>>> UC4
         Pattern fnme = Pattern.compile(pattern);
         if (firstName == null) {
             return false;

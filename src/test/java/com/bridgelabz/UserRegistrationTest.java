@@ -7,15 +7,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class UserRegistrationTest {
     @Test
     public void validateUserFirstName() {
-        assertEquals(true, UserRegistration.isValidFirstName());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.isValidFirstName("Mohammed");
+        assertEquals(true, result);
     }
 
     @Test
     public void validateUserLastName() {
-        assertEquals(true, UserRegistration.isValidLastName());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean lastName = userRegistration.isValidLastName("Atif");
+        assertEquals(true, lastName );
     }
     @Test
     public void validateEmail() {
-        assertEquals(true, UserRegistration.isValidEmail());
+        UserRegistration userRegistration = new UserRegistration();
+        boolean result = userRegistration.isValidLastName("user@domain.com");
+        assertEquals(true, result);
     }
 }

@@ -6,19 +6,13 @@ import java.util.Scanner;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UserRegistrationTest {
-    Scanner scanner = new Scanner(System.in);
     @Test
     public void validateUserFirstName() {
         UserRegistration userRegistration = new UserRegistration();
-<<<<<<< HEAD
 
         boolean result = userRegistration.isValidFirstName("Mohammed");
         assertEquals(true, result);
 
-=======
-        boolean result = userRegistration.isValidFirstName("Mohammed");
-        assertEquals(true, result);
->>>>>>> UC3
     }
 
     @Test

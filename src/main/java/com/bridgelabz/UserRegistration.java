@@ -43,14 +43,42 @@ public class UserRegistration {
         if (mobileNo == null) {
             return false;
         }
-
         Matcher matcher = mob.matcher(mobileNo);
         return matcher.matches();
     }
 
-    public static boolean isValidPwd(String pwd) {
+    public static boolean isValidPwd1(String pwd) {
+        String password = "[a-z A-Z 0-9]{8,}";
+        Pattern pattern = Pattern.compile(password);
+        if (pwd == null) {
+            return false;
+        }
+        Matcher match = pattern.matcher(pwd);
+        return match.matches();
+    }
 
+    public static boolean isValidPwd2(String pwd) {
+        String password = "(?=.*?[A-Z])[a-z A-Z 0-9]{8,}";
+        Pattern pattern = Pattern.compile(password);
+        if (pwd == null) {
+            return false;
+        }
+        Matcher match = pattern.matcher(pwd);
+        return match.matches();
+    }
+
+    public static boolean isValidPwd3(String pwd) {
         String password = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*d).{8,}$";
+        Pattern pattern = Pattern.compile(password);
+        if (pwd == null) {
+            return false;
+        }
+        Matcher match = pattern.matcher(pwd);
+        return match.matches();
+    }
+
+    public static boolean isValidPwd4(String pwd) {
+        String password = "(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
         Pattern pattern = Pattern.compile(password);
         if (pwd == null) {
             return false;

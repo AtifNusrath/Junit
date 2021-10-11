@@ -4,48 +4,104 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import java.util.Arrays;
-import java.util.Collection;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 @RunWith(Parameterized.class)
 public class UserRegistrationTest {
-
+    UserRegistration userRegistration = new UserRegistration();
 
     @Test
-    public void validateUserFirstName() {
-        UserRegistration userRegistration = new UserRegistration();
-
+    public void givenFirstNameHappy() {
         boolean result = userRegistration.isValidFirstName("Mohammed");
-        assertEquals(true, result);
-
+        Assert.assertTrue(result);
     }
 
     @Test
-    public void validateUserLastName() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean lastName = userRegistration.isValidLastName("Atif");
-        assertEquals(true, lastName);
+    public void givenFirstNameSad() {
+        boolean result = userRegistration.isValidFirstName("mohammed");
+        Assert.assertFalse(result);
     }
 
     @Test
-    public void validateEmail() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.isValidEmail("user@domain.com");
-        assertEquals(true, result);
+    public void givenLastNameHappy() {
+        boolean result = userRegistration.isValidLastName("Atif");
+        Assert.assertTrue(result);
     }
 
     @Test
-    public void validateNumber() {
-        UserRegistration userRegistration = new UserRegistration();
+    public void givenLastNameSad() {
+        boolean result = userRegistration.isValidLastName("atif");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenEmailHappy() {
+        boolean result = userRegistration.isValidEmail("abc@gmail.com");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenEmailSad() {
+        boolean result = userRegistration.isValidEmail("abc.@gmail.com");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenMobileNoHappy() {
         boolean result = userRegistration.isValidMobileNo("91 9874563210");
-        assertEquals(true, result);
-    }
-    @Test
-    public void validatePassword() {
-        UserRegistration userRegistration = new UserRegistration();
-        boolean result = userRegistration.isValidPwd("Admin07pass@word");
-        assertEquals(true, result);
+        Assert.assertTrue(result);
     }
 
+    @Test
+    public void givenMobileNoSad() {
+        boolean result = userRegistration.isValidMobileNo("98745203612");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPasswordOneHappy() {
+        boolean result = userRegistration.isValidPwd1("abcdbd34");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPasswordOneSad() {
+        boolean result = userRegistration.isValidPwd1("fhfdhg");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPasswordTwoHappy() {
+        boolean result = userRegistration.isValidPwd2("Aghtjkyf");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPasswordTwoSad() {
+        boolean result = userRegistration.isValidPwd2("ghjkiuyh");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPasswordThreeHappy() {
+        boolean result = userRegistration.isValidPwd3("1Abhujkg");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPasswordThreeSad() {
+        boolean result = userRegistration.isValidPwd3("Agjgtyfg");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void givenPasswordFourHappy() {
+        boolean result = userRegistration.isValidPwd4("@A1hjkih");
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void givenPasswordFourSad() {
+        boolean result = userRegistration.isValidPwd4("ghjuykhg");
+        Assert.assertFalse(result);
+    }
 }

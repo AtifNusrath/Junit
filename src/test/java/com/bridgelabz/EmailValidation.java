@@ -41,7 +41,7 @@ public class EmailValidation {
                 {"abc@gmail.com.1a",false}});
     }
     @Test
-    public void parameterEmailValidation(){
+    public void parameterEmailValidation() throws UserRegistrationException {
         UserRegistration userRegistration = new UserRegistration();
         boolean result = userRegistration.isValidEmail(email2Test);
         assertEquals(expectedResult, result);
